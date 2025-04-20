@@ -10,6 +10,6 @@ import (
 func BubbleRoute(router *gin.Engine, basePath string, sorter sorterPort.Sorter) {
 	bubbleSortHandler := sort.NewBubbleSortHandler(sorter)
 
-	bubbleRoute := router.Group(basePath + "/sort/bubble")
+	bubbleRoute := router.Group(basePath + "/bubble")
 	bubbleRoute.POST("", bubbleSortHandler.SortBubbleAlgorithm)
 }
